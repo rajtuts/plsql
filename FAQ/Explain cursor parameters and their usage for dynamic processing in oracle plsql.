@@ -1,4 +1,4 @@
-Cursor parameters are a powerful feature in Oracle PL/SQL that allow you to create dynamic SQL queries within cursors. This enables you to modify the WHERE clause, sorting criteria, or other parts of the query based on input values or variables at runtime. 
+# Cursor parameters are a powerful feature in Oracle PL/SQL that allow you to create dynamic SQL queries within cursors. This enables you to modify the WHERE clause, sorting criteria, or other parts of the query based on input values or variables at runtime. 
 
 Here's a breakdown of cursor parameters and their usage:
 
