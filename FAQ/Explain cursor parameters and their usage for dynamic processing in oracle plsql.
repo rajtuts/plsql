@@ -1,4 +1,3 @@
-
 In Oracle PL/SQL, cursors are essential for dynamic row-by-row processing of query results. They allow programmers to iterate through query results, making it possible to perform operations on each row. Here’s a detailed explanation of cursor parameters and their usage for dynamic processing in Oracle PL/SQL.
 
 ### Cursor Parameters
