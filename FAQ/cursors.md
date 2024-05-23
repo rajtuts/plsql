@@ -1,13 +1,26 @@
 In Oracle PL/SQL, cursors are essential for dynamic row-by-row processing of query results. They allow programmers to iterate through query results, making it possible to perform operations on each row. Here’s a detailed explanation of cursor parameters and their usage for dynamic processing in Oracle PL/SQL.
 
-### Cursor Parameters
+### Key Cursor Parameters
 
-1. **Explicit Cursors**:
-   These are defined and controlled by the programmer. They provide more control over fetching rows, and their lifecycle includes declaring, opening, fetching rows, and closing.
+1. **Cursor Type**:
+   - **Static Cursor**: This type provides a snapshot of the result set when the cursor is opened. Any changes made to the data after the cursor is opened are not visible.
+   - **Dynamic Cursor**: This type reflects all changes made to the rows in its result set as you navigate through the rows.
+   - **Forward-only Cursor**: This type can only move forward through the result set, which is less resource-intensive compared to other types.
+   - **Keyset-driven Cursor**: This type lies between static and dynamic cursors. It reflects changes to data but not to the structure (e.g., new rows or deleted rows won't be visible).
 
-2. **Implicit Cursors**:
-   These are automatically created by Oracle when a SELECT statement returns only one row. They are simpler but offer less control compared to explicit cursors.
+2. **Fetch Options**:
+   - **NEXT**: Fetches the next row in the result set.
+   - **PRIOR**: Fetches the previous row in the result set.
+   - **FIRST**: Fetches the first row in the result set.
+   - **LAST**: Fetches the last row in the result set.
+   - **ABSOLUTE**: Fetches a specific row based on an absolute position.
+   - **RELATIVE**: Fetches a row relative to the current position.
 
+3. **Concurrency Control**:
+   - **Read-Only**: The cursor cannot be used to update data.
+   - **Optimistic Concurrency**: The cursor checks if the row was modified after it was read but before it was updated.
+   - **Pessimistic Concurrency**: Locks the row when it is read to ensure no other process can modify it.
+     
 ### Key Parameters of Explicit Cursors
 
 1. **Cursor Declaration**:
